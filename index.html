@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Powerfitness GYM</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap"
+    rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+  <link rel="preload" as="image" href="./assets/images/hero-circle-one.png">
+  <link rel="preload" as="image" href="./assets/images/hero-circle-two.png">
+  <link rel="preload" as="image" href="./assets/images/heart-rate.svg">
+  <link rel="preload" as="image" href="./assets/images/calories.svg">
+
+  <!--
+  -------- map
+  -->
+
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    
+
+
+  
+
+</head>
+
+<body id="top" lang="fr">
+  
+    <!-- Header Section -->
+     <header class="header" data-header>
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="assets/images/logo.png" alt="logo">
+        </a>
+  
+        <nav class="navbar" data-navbar>
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
+          </button>
+  
+          <ul class="navbar-list">
+            <li>
+              <a href="#home" class="navbar-link" data-nav-link>Accueil</a>
+            </li>
+  
+            <li>
+              <a href="#about" class="navbar-link" data-nav-link>À Propos</a>
+            </li>
+  
+            <li>
+              <a href="#find" id="myButton" class="navbar-link" data-nav-link>Trouver votre<br>Gym</a>
+            </li>
+  
+            <li>
+              <a href="#shop" class="navbar-link" data-nav-link>Boutique</a>
+            </li>
+  
+            <li>
+              <a href="#contact" class="navbar-link" data-nav-link>Contactez-nous</a>
+            </li>
+
+            <a href="./index-ar.html">AR</a>
+            <a href="./index.html">FR</a>
+  
+            <a href="./pages/pricing.html" class="btn btn-secondary">Abonnements</a>
+          </ul>
+        </nav>
+  
+        
+  
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </div>
+     </header>
+  
+  
+    <main>
+      <article>
+  
+        <!-- Hero Section -->
+  
+        <section class="section hero bg-dark has-after has-bg-image"
+        id="home" aria aria-label="hero" data-section 
+        style="background-image: url('./assets/images/hero-bg.png');">
+          <div class="container">
+  
+            <div class="hero-content">
+              <p class="hero-subtitle">
+                <strong class="strong">Meilleur</strong>Fitness Club
+              </p>
+              <h1 class="h1 hero-title">
+                Work Hard to Get Better Life
+              </h1>
+              <p class="section-text">
+                Transformez votre Parcours de Remise en Forme avec notre Entreprise de Gym Complète - Votre Compagnon de Fitness Ultime.
+              </p>
+              <a href="./pages/pricing.html" class="btn btn-primary">Commencez !</a>
+            </div>
+  
+            <div class="hero-banner">
+              <img src="./assets/images/hero-banner.png" alt="hero banner" class="w-100"
+              width="660" height="753">
+              <img src="./assets/images/hero-circle-one.png" alt="hero banner" 
+              width="666" height="666" aria-hidden="true" class="circle circle-1">
+              <img src="./assets/images/hero-circle-two.png" alt="hero banner" 
+              width="666" height="666" aria-hidden="true" class="circle circle-2">
+  
+              <img src="./assets/images/heart-rate.svg" alt="heart rate" 
+              width="255" height="270" class="abs-img abs-img-1">
+              <img src="./assets/images/calories.svg" alt="calories" 
+              width="348" height="224" class="abs-img abs-img-2">
+            </div>
+  
+          </div>
+  
+  
+        </section>
+  
+        <!-- About Section -->
+  
+        <section class="section about" id="about" aria-label="about">
+          <div class="container">
+  
+            <div class="about-banner has-after">
+              <img src="assets/images/about-banner.png" alt="about banner"
+              width="660" height="648" loading="lazy" class="w-100">
+  
+              <img src="assets/images/about-circle-one.png" alt="" width="660" height="534"
+              loading="lazy" aria-hidden="true" class="circle circle-1">
+              <img src="assets/images/about-circle-two.png" alt="" width="660" height="534"
+              loading="lazy" aria-hidden="true" class="circle circle-2">
+  
+              <img src="assets/images/fitness.png" alt="fitness" width="650" height="154"
+              loading="lazy" class="abs-img w-100">
+            </div>
+  
+            <div class="about-content">
+              <p class="section-subtitle">À Propos</p>
+              <h2 class="h2 section-title">Bienvenue dans Notre Salle de Sport</h2>
+              <p class="section-text">
+                Notre salle de sport a ouvert ses portes en 2020 à Bordj Bou Arréridj. Depuis nos débuts, nous nous engageons à offrir un environnement accueillant et inspirant pour tous nos membres. Notre objectif est de promouvoir un mode de vie sain, encourager la confiance en soi et créer une communauté solidaire.
+              </p>
+  
+              <p class="section-text">
+                Chaque jour, nous travaillons avec passion pour aider nos membres à atteindre leurs objectifs personnels, qu'ils soient liés à la santé, à la forme physique ou au bien-être mental. Rejoignez-nous et devenez une partie intégrante de notre famille, car ici, chaque pas compte vers une meilleure version de vous-même.
+              </p>
+  
+            
+  
+            </div>
+          </div>
+  
+          
+        </section>
+  
+        <!-- Video Section -->
+  
+        <section class="section video" aria-label="video">
+          <div class="container">
+            <div class="video-card has-before has-bg-image"
+            style="background-image: url('./assets/images/video-banner.jpg');">
+              <h2 class="h2 card-title">Explorez la Vie Fitness</h2>
+  
+              <a href="https://www.instagram.com/reel/C-6IiO0sVkT/?igsh=MXFmd3ZnbG9jZnhiNw%3D%3D" target="_blank">
+                <button class="play-btn" aria-label="play video">
+                  <ion-icon name="play-sharp" aria-hidden="true">
+                </button>
+              </a>
+  
+              <a href="#contact" class="btn-link has-before">Regardez Plus</a>
+            </div>
+          </div>
+        </section>
+  
+        <!-- IMAGE CAROUSSEL SECTION -->
+  
+        <section class="section gallery" aria-label="gallery">
+  
+          <div class="container">
+            <div class="slider">
+              <div class="list">
+                  <div class="item">
+                      <img src="./assets/images/1.jpg" alt="">
+                  </div>
+                  <div class="item">
+                      <img src="./assets/images/2.jpg" alt="">
+                  </div>
+                  <div class="item">
+                      <img src="./assets/images/3.jpg" alt="">
+                  </div>
+                  <div class="item">
+                      <img src="./assets/images/4.jpg" alt="">
+                  </div>
+                  <div class="item">
+                      <img src="./assets/images/5.jpg" alt="">
+                  </div>
+              </div>
+              <div class="buttons">
+                  <button id="prev"><</button>
+                  <button id="next">></button>
+              </div>
+              <ul class="dots">
+                  <li class="active"></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+              </ul>
+          </div>
+          </div>
+  
+        </section>
+  
+        <!-- FIND Section -->
+  
+        <section class="section find has-bg-image" id="find" aria-label="find"
+        style="background-image: url('assets/images/classes-bg.png'); background-color: #ffb39b;">
+  
+        
+  
+          <div class="container">
+            <p class="section-subtitle">Trouver Votre Gym</p>
+            <h2 class="h3 section-title text-center">Club de GYM dans Chaque Wilaya !</h2>
+  
+            <div id="map">
+              
+            </div>
+  
+          </div>
+        </section>
+  
+        <!-- SHOP Section -->
+  
+        <div class="shop-title">
+          <p class="section-subtitle">Boutique</p>
+        </div>
+        
+  
+        <section class="section product-slider shop" id="shop">
+  
+          <div class="container">
+            
+          
+  
+          
+          <div class="card">
+  
+            <div class="panel-1"></div>
+            <div class="panel-2"></div>
+  
+            <div class="product">
+              <div class="product-image">
+                <img src="./assets/images/product1.png" alt="product">
+              </div>
+  
+              <div class="product-details">
+                <div>
+                  <h1 class="product-name">
+                    Suppléments alimentaires
+                  </h1>
+                  <h1 class="price">
+                    <span class="product-price">
+                      apartir de: 2000 DZD
+                    </span>
+                  </h1>
+                  <div class="details">
+                    <div class="options">
+                      <b class="product-option-title">
+                        Helmet Size
+                      </b>
+                      <ul class="options-list">
+                        <li class="option option-active">
+                          S
+                        </li>
+                        <li class="option">
+                          M
+                        </li>
+                        <li class="option">
+                          L
+                        </li>
+                        <li class="option">
+                          XL
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="specs">
+                      <p>Explorez notre Gamme de Produits pour la GYM !</p>
+                    </div>
+                  </div>
+                  <div class="buttons">
+                    <button type="button" class="button-primary"><b>Browse Category</b>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="arrow-left">
+              <i class="fas fa-arrow-left"></i>
+            </div>
+            <div class="arrow-right">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+        </section>
+  
+  
+      </article>
+    </main>
+  
+  
+  
+    <!-- Footer Section -->
+    <footer class="footer" id="contact">
+      <div class="section footer-top bg-dark has-bg-image"
+      style="background-image: url('./assets/images/footer-bg.png');">
+        <div class="container">
+  
+          <div class="footer-brand">
+            <a href="index.html" class="logo">
+              <img src="./assets/images/logo.png" alt="logo">
+            </a>
+  
+            <p class="footer-brand-text">
+              Etiam suscipiti firkohjkaf kjajhfa s jhasfhjk fskjah fhd
+              odio.
+            </p>
+  
+            <div class="wrapper">
+              <img src="./assets/images/footer-clock.png" width="34" height="34" loading="lazy" alt="clock">
+  
+              <ul class="footer-brand-list">
+                <li>
+                  <p class="footer-brand-title">Samedi - Vendredi</p>
+                  <p>06:00Am - 23:00Pm</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+  
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title has-before">Nos Liens</p>
+            </li>
+  
+            <li>
+              <a href="#home" class="footer-link">Accueil</a>
+            </li>
+  
+            <li>
+              <a href="#about" class="footer-link">À Propos</a>
+            </li>
+  
+            <li>
+              <a href="#find" class="footer-link">Trouver Votre Gym</a>
+            </li>
+  
+            <li>
+              <a href="#shop" class="footer-link">Boutique</a>
+            </li>
+  
+            <li>
+              <a href="./pages/pricing.html" class="footer-link">Tarifs d'Abonnements</a>
+            </li>
+          </ul>
+  
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title has-before">Contactez-nous</p>
+            </li>
+  
+            <li class="footer-list-item">
+              <div class="icon">
+                <ion-icon name="location" aria-hidden="true"></ion-icon>
+              </div>
+  
+              <address class="address footer-link">
+                6HPG+5R8, Constantine, Ali Mendjli, Algerie.
+              </address>
+            </li>
+  
+            <li class="footer-list-item">
+              <div class="icon">
+                <ion-icon name="call" aria-hidden="true"></ion-icon>
+              </div>
+  
+              <div>
+                <a href="tel:" class="footer-link">+213 000-00-00-00</a>
+  
+                <a href="tel:" class="footer-link">+213 000-00-00-00</a>
+              </div>
+  
+            </li>
+  
+            <li class="footer-list-item">
+              <div class="icon">
+                <ion-icon name="mail" aria-hidden="true"></ion-icon>
+              </div>
+  
+              <div>
+                <a href="mailto:" class="footer-link">mail@powerfitness.com</a>
+                <a href="mailto:" class="footer-link">mail@powerfitness.com</a>
+              </div>
+            </li>
+          </ul>
+  
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title has-before">Our Newsletter</p>
+            </li>
+  
+            <li>
+              <form action="" class="footer-form">
+                <input type="email" name="email_address" aria-label="email"
+                placeholder="Email Address" required class="input-field">
+  
+                <button type="submit" aria-label="Submit" class="btn btn-primary">
+                  <ion-icon name="chevron-forward-sharp" aria-hidden="true"></ion-icon>
+                </button>
+              </form>
+            </li>
+  
+            <li>
+              <ul class="social-list">
+                
+                <li>
+                  <a href="www.facebook.com" class="social-link">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+  
+                <li>
+                  <a href="https://www.instagram.com/powerfitness_25?igsh=MXN6dW54NWQ5ZzlreA==" class="social-link" target="_blank">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                </li>
+  
+                <li>
+                  <a href="https://www.tiktok.com/@powerfitness.25?_t=8qb5Bbjvxcz&_r=1" class="social-link" target="_blank">
+                    <ion-icon name="logo-tiktok"></ion-icon>
+                  </a>
+                </li>
+  
+              </ul>
+            </li>
+          </ul>
+  
+        </div>
+      </div>
+    </footer>
+
+
+
+  <!-- Back to Top Section -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="caret-up-sharp" aria-hidden="true"></ion-icon>
+  </a>
+
+  <!-- Custom JS Link -->
+  <script src="./assets/js/script.js" defer></script>
+
+
+
+  <!-- ION-ICON Link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script src="https://kit.fontawesome.com/5e710cf52b.js" crossorigin="anonymous"></script>
+
+  <!-- MAP SCRIPT -->
+
+  <script>
+    // Initialize the map and set its view to a chosen location and zoom level
+    var map = L.map('map').setView([36.23571035578865, 6.576858018598605], 7);  // Latitude and longitude of center
+
+    // Add OpenStreetMap tiles as the map background
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+</script>
+
+
+</body>
+
+</html>
